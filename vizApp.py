@@ -8,7 +8,7 @@ def lasq_date(x):
     
     y=x[:10]
     d=x[11:len(x)-5]
-    dd=y+' '+d
+    dd=y+' '+d 
     return(datetime.strptime(dd, '%Y-%m-%d %H:%M:%S'))
         
 
@@ -51,6 +51,7 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 
 st.title('Comparateur de tweets de politiciens')
+st.markdown( "On s'est intereser dans ce projet certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**")
 
 var = st.radio(
      "quel est la  variable que vous souhaitez visualiser ",
