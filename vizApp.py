@@ -55,78 +55,77 @@ var = st.radio(
      "quel est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
 
-tout = st.radio(
-     "souhaitez vous comparer tous les politiciens ? ",
-     ('Oui', 'Non'))
+st.write(
+     "On compare en premier tous les politiciens ! ")
 
-if tout=='Oui':
+
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
 #      ('re-tweets', 'commentaires', 'likes'))
 
 
 
-    d1o = st.date_input(
-         "La date du début")
-    format= '%Y-%m-%d %H:%M:%S'
+d1o = st.date_input(
+     "La date du début")
+format= '%Y-%m-%d %H:%M:%S'
 
-    dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
-
-
-    d2o = st.date_input(
-         "La date de fin")
-
-    dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
-    
-    dataz = zemour[dd1o<zemour['daate']]
-    dataz=dataz[dataz['daate']<dd2o]
-    
-    datam = macron[dd1o<macron['daate']]
-    datam=datam[datam['daate']<dd2o]
-    
-    datamel = mel[dd1o<mel['daate']]
-    datamel=datamel[datamel['daate']<dd2o]
-    
-    base1o = alt.Chart(dataz)
-    base2o=alt.Chart(datam)
-    base3o=alt.Chart(datamel)
-    
-    if var=='re-tweets':
-        line11o = base1o.mark_line(color='#DC143C').encode(
-            x='daate',
-            y=E[0],)
-        line12o = base2o.mark_line(color='#E3CF57').encode(
-            x='daate',
-            y=E[0],)
-        line13o = base3o.mark_line(color='#CD1076').encode(
-            x='daate',
-            y=E[0],)
-
-    if var=='commentaires':
-        line11o = base1o.mark_line(color='#DC143C').encode(
-           x='daate',
-            y=E[1],)
-        line12o = base2o.mark_line(color='#E3CF57').encode(
-            x='daate',
-            y=E[1],)
-        line13o = base3o.mark_line(color='#CD1076').encode(
-            x='daate',
-            y=E[1],)
-
-    if var=='likes':
-        line11o = base1o.mark_line(color='#DC143C').encode(
-            x='daate',
-            y=E[2],)
-        line12o = base2o.mark_line(color='#E3CF57').encode(
-            x='daate',
-            y=E[2],)
-        line13o = base3o.mark_line(color='#CD1076').encode(
-            x='daate',
-            y=E[2],)
+dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
+d2o = st.date_input(
+     "La date de fin")
 
-    st.altair_chart(line11o+line12o+line13o, use_container_width=True)
+dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
+
+dataz = zemour[dd1o<zemour['daate']]
+dataz=dataz[dataz['daate']<dd2o]
+
+datam = macron[dd1o<macron['daate']]
+datam=datam[datam['daate']<dd2o]
+
+datamel = mel[dd1o<mel['daate']]
+datamel=datamel[datamel['daate']<dd2o]
+
+base1o = alt.Chart(dataz)
+base2o=alt.Chart(datam)
+base3o=alt.Chart(datamel)
+
+if var=='re-tweets':
+    line11o = base1o.mark_line(color='#DC143C').encode(
+        x='daate',
+        y=E[0],)
+    line12o = base2o.mark_line(color='#E3CF57').encode(
+        x='daate',
+        y=E[0],)
+    line13o = base3o.mark_line(color='#CD1076').encode(
+        x='daate',
+        y=E[0],)
+
+if var=='commentaires':
+    line11o = base1o.mark_line(color='#DC143C').encode(
+       x='daate',
+        y=E[1],)
+    line12o = base2o.mark_line(color='#E3CF57').encode(
+        x='daate',
+        y=E[1],)
+    line13o = base3o.mark_line(color='#CD1076').encode(
+        x='daate',
+        y=E[1],)
+
+if var=='likes':
+    line11o = base1o.mark_line(color='#DC143C').encode(
+        x='daate',
+        y=E[2],)
+    line12o = base2o.mark_line(color='#E3CF57').encode(
+        x='daate',
+        y=E[2],)
+    line13o = base3o.mark_line(color='#CD1076').encode(
+        x='daate',
+        y=E[2],)
+
+
+
+st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
 
 pol1 = st.radio(
