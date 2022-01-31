@@ -214,7 +214,7 @@ st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 
 if(mot in list(Mot)):
-    st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][0], 'par Macron')
+    st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][2], 'par Macron')
     
 
 
