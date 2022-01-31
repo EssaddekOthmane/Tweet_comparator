@@ -27,15 +27,15 @@ mel=pd.read_csv('Df_mell.csv')
 
 macron['daate'] = macron['Timestamp'].apply( lambda x : lasq_date(x) )
 macron['heuure'] = macron['Timestamp'].apply( lambda x : lasq_heure(x) )
-macron['month'] = macron['date'].apply(lambda d: d.month)
+# macron['month'] = macron['date'].apply(lambda d: d.month)
 
 zemour['daate'] = zemour['Timestamp'].apply( lambda x : lasq_date(x) )
 zemour['heuure'] = zemour['Timestamp'].apply( lambda x : lasq_heure(x) )
-zemour['month'] = zemour['date'].apply(lambda d: d.month)
+# zemour['month'] = zemour['date'].apply(lambda d: d.month)
 
 mel['daate'] = mel['Timestamp'].apply( lambda x : lasq_date(x) )
 mel['heuure'] = mel['Timestamp'].apply( lambda x : lasq_heure(x) )
-mel['month'] = mel['date'].apply(lambda d: d.month)
+# mel['month'] = mel['date'].apply(lambda d: d.month)
 
 # zemour['month'] = zemour['date'].apply(lambda d: d.month)
 # mel['month'] = mel['date'].apply(lambda d: d.month)
