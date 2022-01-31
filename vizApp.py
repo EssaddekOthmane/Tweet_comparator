@@ -128,11 +128,11 @@ if var=='likes':
 st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
 
-pol1 = st.radio(
+pol1 = st.radio_input(
      "quel est le premier  politicien que vouz choisisez? (bleu) ",
      ('Zmmour', 'Macron', 'Mellonchon'))
 
-pol2 = st.radio(
+pol2 = st.radio_input(
      "quel est le deuxieme  politicien que vouz choisisez? (rouge) ",
      ('Zmmour', 'Macron', 'Mellonchon'))
 
@@ -144,7 +144,7 @@ pol2 = st.radio(
 
 d1 = st.date_input(
      "La date du début")
-format= '%Y-%m-%d %H:%M:%S'
+
 
 dd1=d1.strftime('%Y-%m-%d %H:%M:%S')
 
