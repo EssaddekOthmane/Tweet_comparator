@@ -40,10 +40,10 @@ mel['heuure'] = mel['Timestamp'].apply( lambda x : lasq_heure(x) )
 # zemour['month'] = zemour['date'].apply(lambda d: d.month)
 # mel['month'] = mel['date'].apply(lambda d: d.month)
 
-mDf=pd.read_csv('occurM.csv')
-diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
+# mDf=pd.read_csv('occurM.csv')
+# diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
 
-DataMtronc1=macron[macron['date']>'2019-11-01 21:53:43']
+# DataMtronc1=macron[macron['date']>'2019-11-01 21:53:43']
 E=['SMA_R3','SMA_C3','SMA_L3']
 
 
