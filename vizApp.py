@@ -94,11 +94,11 @@ if var=='commentaires':
 
 if var=='likes':
     line11 = base1.mark_line().encode(
-        x=
-        y=E[2],)
+     
+        y=E[2])
     line12 = base2.mark_line(color='red').encode(
-        x='date',
-        y=E[2],)
+        
+        y=E[2])
     
 
 
