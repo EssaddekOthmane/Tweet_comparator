@@ -51,9 +51,7 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 
 st.title('Comparateur de tweets de politiciens')
-st.markdown( "On s'est intereser durant ce projet a certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.\\
-On a fait en premier lieux une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.\\
-On vous propose alors de visualiser la moyenne mobile (sur un mois) de la variable que vous voulez, et cela vpous donnera une idée sur le moment de chaque candidat par rapport au deux autre.   ")
+st.markdown( "On s'est intereser durant ce projet a certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.On a fait en premier lieux une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.On vous propose alors de visualiser la moyenne mobile **sur un mois** de la variable que vous voulez, et cela vpous donnera une idée sur le moment de chaque candidat par rapport au deux autres.   ")
 
 var = st.radio(
      "quel est la  variable que vous souhaitez visualiser ",
