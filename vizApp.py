@@ -73,9 +73,19 @@ if tout=='Oui':
          "La date de fin")
 
     dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
-    base1o = alt.Chart(zemour)
-    base2o=alt.Chart(macron)
-    base3o=alt.Chart(mel)
+    
+    dataz = zemour[dd1o<zemour['daate']]
+    dataz=dataz[self.data['daate']<dd2o]
+    
+    datam = macron[dd1o<zemour['daate']]
+    datam=datam[self.data['daate']<dd2o]
+    
+    datamel = mel[dd1o<zemour['daate']]
+    datamel=datamel[self.data['daate']<dd2o]
+    
+    base1o = alt.Chart(dataz)
+    base2o=alt.Chart(datam)
+    base3o=alt.Chart(datamel)
     
     if varo=='re-tweets':
         line11o = base1o.mark_line(color='#DC143C').encode(
