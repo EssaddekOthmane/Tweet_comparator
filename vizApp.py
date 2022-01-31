@@ -102,7 +102,7 @@ if tout=='Oui':
         line11o = base1o.mark_line(color='#DC143C').encode(
            x='daate',
             y=E[1],)
-        line12o = base2o.mark_line(color='E3CF57').encode(
+        line12o = base2o.mark_line(color='#E3CF57').encode(
             x='daate',
             y=E[1],)
         line13o = base3o.mark_line(color='#CD1076').encode(
@@ -113,7 +113,7 @@ if tout=='Oui':
         line11o = base1o.mark_line(color='#DC143C').encode(
             x='daate',
             y=E[2],)
-        line12o = base2o.mark_line(color='E3CF57').encode(
+        line12o = base2o.mark_line(color='#E3CF57').encode(
             x='daate',
             y=E[2],)
         line13o = base3o.mark_line(color='#CD1076').encode(
