@@ -53,14 +53,14 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 st.title('Comparateur des tweets de candidats de la  présidentielle 2022')
 st.markdown( "On s'est intereser durant ce projet a certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
 st.markdown( "On a fait en premier lieux une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.")
-st.markdown( "On vous propose alors de visualiser la moyenne mobile **sur un mois** de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport au deux autres.   ")
+st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur un mois*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport au deux autres.   ")
 
 var = st.radio(
      "quel est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
 
 st.write(
-     "On compare en premier tous les politiciens ! ")
+     "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
 
 #     varo = st.radio(
@@ -99,7 +99,7 @@ if var=='re-tweets':
     line12o = base2o.mark_line(color='#E3CF57').encode(
         x='daate',
         y=E[0],)
-    line13o = base3o.mark_line(color='#CD1076').encode(
+    line13o = base3o.mark_line(color='#458B00').encode(
         x='daate',
         y=E[0],)
 
@@ -110,7 +110,7 @@ if var=='commentaires':
     line12o = base2o.mark_line(color='#E3CF57').encode(
         x='daate',
         y=E[1],)
-    line13o = base3o.mark_line(color='#CD1076').encode(
+    line13o = base3o.mark_line(color='#458B00').encode(
         x='daate',
         y=E[1],)
 
@@ -121,7 +121,7 @@ if var=='likes':
     line12o = base2o.mark_line(color='#E3CF57').encode(
         x='daate',
         y=E[2],)
-    line13o = base3o.mark_line(color='#CD1076').encode(
+    line13o = base3o.mark_line(color='#458B00').encode(
         x='daate',
         y=E[2],)
 
@@ -129,10 +129,10 @@ if var=='likes':
 
 st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
-
+st.markdown("Maintenant vous pouvez faire des comparaisons pour une paire de politiciens.")
 pol1 = st.radio(
      "quel est le premier  politicien que vouz choisisez? (bleu) ",
-     ('Zmmour', 'Macron', 'Mellonchon'))
+     ('Zemmour', 'Macron', 'Melenchon'))
 
 pol2 = st.radio(
      "quel est le deuxieme  politicien que vouz choisisez? (rouge) ",
@@ -156,13 +156,13 @@ d2 = st.date_input(
 
 dd2=d2.strftime('%Y-%m-%d %H:%M:%S')
   
-pols= ['Zmmour', 'Macron', 'Mellonchon']
+pols= ['Zemmour', 'Macron', 'Mellonchon']
 
 class Candidat(str):
 
     def __init__(self,str):
 
-        if str is 'Zmmour':
+        if str is 'Zemmour':
 
             self.data = zemour[dd1<zemour['daate']]
             self.data=self.data[self.data['daate']<dd2]
@@ -211,7 +211,9 @@ if var=='likes':
 
 st.altair_chart(line11+line12, use_container_width=True)
 
-
+st.markdown("En passe maintenat a l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat a utiliser depuis la création de son compte tweeter. ")
+st.markdown("Les mots doivent etre en **minuscule!** ")
+st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité ...")
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
