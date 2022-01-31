@@ -51,6 +51,68 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 st.title('Comparateur de tweets de politiciens')
 
+tout = st.radio(
+     "souhaitez vous comparer tous les politiciens ? ",
+     ('Oui', 'Non'))
+
+if tout=='Oui':
+    varo = st.radio(
+     "quel est la  variable que vous souhaitez visualiser ",
+     ('re-tweets', 'commentaires', 'likes'))
+
+
+
+    d1o = st.date_input(
+         "La date du début")
+    format= '%Y-%m-%d %H:%M:%S'
+
+    dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
+
+
+    d2o = st.date_input(
+         "La date de fin")
+
+    dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
+    base1o = alt.Chart(zemour)
+    base2o=alt.Chart(macron)
+    base3o=alt.Chart(mel)
+    
+    if varo=='re-tweets':
+        line11o = base1o.mark_line().encode(
+            x='daate',
+            y=E[0],)
+        line12o = base2o.mark_line(color='red').encode(
+            x='daate',
+            y=E[0],)
+        line13o = base3o.mark_line(color='red').encode(
+            x='daate',
+            y=E[0],)
+
+    if varo=='commentaires':
+        line11o = base1o.mark_line().encode(
+           x='daate',
+            y=E[1],)
+        line12o = base2o.mark_line(color='red').encode(
+            x='daate',
+            y=E[1],)
+        line13o = base3o.mark_line(color='red').encode(
+            x='daate',
+            y=E[1],)
+
+    if varo=='likes':
+        line11o = base1o.mark_line().encode(
+            x='daate',
+            y=E[2],)
+        line12o = base2o.mark_line(color='red').encode(
+            x='daate',
+            y=E[2],)
+        line13o = base3o.mark_line(color='red').encode(
+            x='daate',
+            y=E[2],)
+
+
+
+    st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
 
 pol1 = st.radio(
