@@ -65,13 +65,13 @@ st.write(
 
 
 
-d1o = st.date_input("La date du début")
+d1o = st.date_input("La date du début",key =1)
 
 dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin")
+     "La date de fin",key =2)
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -141,14 +141,14 @@ pol2 = st.radio(
 
 
 d1 = st.date_input(
-     "La date du début")
+     "La date du début",key =3)
 
 
 dd1=d1.strftime('%Y-%m-%d %H:%M:%S')
 
   
 d2 = st.date_input(
-     "La date de fin")
+     "La date de fin",key =4)
 
 dd2=d2.strftime('%Y-%m-%d %H:%M:%S')
   
