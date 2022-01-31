@@ -51,14 +51,18 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 st.title('Comparateur de tweets de politiciens')
 
+var = st.radio(
+     "quel est la  variable que vous souhaitez visualiser ",
+     ('re-tweets', 'commentaires', 'likes'))
+
 tout = st.radio(
      "souhaitez vous comparer tous les politiciens ? ",
      ('Oui', 'Non'))
 
 if tout=='Oui':
-    varo = st.radio(
-     "quel est la  variable que vous souhaitez visualiser ",
-     ('re-tweets', 'commentaires', 'likes'))
+#     varo = st.radio(
+#      "quel est la  variable que vous souhaitez visualiser ",
+#      ('re-tweets', 'commentaires', 'likes'))
 
 
 
@@ -87,7 +91,7 @@ if tout=='Oui':
     base2o=alt.Chart(datam)
     base3o=alt.Chart(datamel)
     
-    if varo=='re-tweets':
+    if var=='re-tweets':
         line11o = base1o.mark_line(color='#DC143C').encode(
             x='daate',
             y=E[0],)
@@ -98,7 +102,7 @@ if tout=='Oui':
             x='daate',
             y=E[0],)
 
-    if varo=='commentaires':
+    if var=='commentaires':
         line11o = base1o.mark_line(color='#DC143C').encode(
            x='daate',
             y=E[1],)
@@ -109,7 +113,7 @@ if tout=='Oui':
             x='daate',
             y=E[1],)
 
-    if varo=='likes':
+    if var=='likes':
         line11o = base1o.mark_line(color='#DC143C').encode(
             x='daate',
             y=E[2],)
@@ -133,9 +137,9 @@ pol2 = st.radio(
      "quel est le deuxieme  politicien que vouz choisisez? (rouge) ",
      ('Zmmour', 'Macron', 'Mellonchon'))
 
-var = st.radio(
-     "quel est la  variable que vous souhaitez visualiser ",
-     ('re-tweets', 'commentaires', 'likes'))
+# var = st.radio(
+#      "quel est la  variable que vous souhaitez visualiser ",
+#      ('re-tweets', 'commentaires', 'likes'))
 
 
 
