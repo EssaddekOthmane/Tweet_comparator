@@ -40,8 +40,9 @@ mel['heuure'] = mel['Timestamp'].apply( lambda x : lasq_heure(x) )
 # zemour['month'] = zemour['date'].apply(lambda d: d.month)
 # mel['month'] = mel['date'].apply(lambda d: d.month)
 
-# mDf=pd.read_csv('occurM.csv')
-# diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
+mDf=pd.read_csv('occurM.csv')
+Mot=mDf['Unnamed: 0']
+diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
 
 # DataMtronc1=macron[macron['date']>'2019-11-01 21:53:43']
 E=['SMA_R3','SMA_C3','SMA_L3']
@@ -208,10 +209,10 @@ if var=='likes':
 st.altair_chart(line11+line12, use_container_width=True)
 
 
-#option = st.sidebar.checkbox('quel mot?')
-
-st.write('Your birthday is:')
-
+# option = st.sidebar.checkbox('quel mot?')
+st.write('Quel est le mot que vous souhaitez tester?')
+mot=st.text_input()
+st.write(mot)
 # ID={pol1:{
 # df
 # },
