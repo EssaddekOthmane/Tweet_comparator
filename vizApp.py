@@ -7,7 +7,7 @@ import streamlit as st
 
 macron=pd.read_csv('DF_mac.csv')
 zemour=pd.read_csv('DF_zem.csv')
-mel=pd.read_csv('DF_mel.csv.csv')
+mel=pd.read_csv('DF_mel.csv')
 
 
 mDf=pd.read_csv('occurM.csv')
