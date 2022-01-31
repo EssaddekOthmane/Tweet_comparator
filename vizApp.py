@@ -9,6 +9,9 @@ macron=pd.read_csv('DF_mac.csv')
 zemour=pd.read_csv('DF_zem.csv')
 mel=pd.read_csv('Df_mell.csv')
 
+macron['month'] = macron['date'].dt.month
+zemour['month'] = macron['date'].dt.month
+mel['month'] = macron['date'].dt.month
 
 mDf=pd.read_csv('occurM.csv')
 diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
@@ -78,26 +81,26 @@ base2=alt.Chart(Abstractpol2.data)
 
 if var=='re-tweets':
     line11 = base1.mark_line().encode(
-        x='date',
+        x='month',
         y=E[0],)
     line12 = base2.mark_line(color='red').encode(
-        x='date',
+        x='month',
         y=E[0],)
 
 if var=='commentaires':
     line11 = base1.mark_line().encode(
-       x='date',
+       x='month',
         y=E[1],)
     line12 = base2.mark_line(color='red').encode(
-        x='date',
+        x='month',
         y=E[1],)
 
 if var=='likes':
     line11 = base1.mark_line().encode(
-        x='date',
+        x='month',
         y=E[2],)
     line12 = base2.mark_line(color='red').encode(
-        x='date',
+        x='month',
         y=E[2],)
     
 
