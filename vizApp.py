@@ -102,7 +102,7 @@ if var=='likes':
     
 
 
-st.altair_chart(line11+line12, use_container_width=False)
+st.altair_chart(line11+line12, use_container_width=True)
 
 
 #option = st.sidebar.checkbox('quel mot?')
