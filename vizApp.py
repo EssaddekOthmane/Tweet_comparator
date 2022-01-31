@@ -81,24 +81,24 @@ if var=='re-tweets':
         x='date',
         y=E[0])
     line12 = base2.mark_line(color='red').encode(
-        x='date',
-        y=E[0])
+        x=macron['date'],
+        y=E[0],)
 
 if var=='commentaires':
     line11 = base1.mark_line().encode(
        x='date',
-        y=E[1])
+        y=E[1],)
     line12 = base2.mark_line(color='red').encode(
         x='date',
-        y=E[1])
+        y=E[1],)
 
 if var=='likes':
     line11 = base1.mark_line().encode(
         x='date',
-        y=E[2])
+        y=E[2],)
     line12 = base2.mark_line(color='red').encode(
         x='date',
-        y=E[2])
+        y=E[2],)
     
 
 
