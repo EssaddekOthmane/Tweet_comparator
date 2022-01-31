@@ -79,7 +79,7 @@ base2=alt.Chart(Abstractpol2.data)
 if var=='re-tweets':
     line11 = base1.mark_line().encode(
         x='date',
-        y=E[0])
+        y=E[0],)
     line12 = base2.mark_line(color='red').encode(
         x='date',
         y=E[0],)
