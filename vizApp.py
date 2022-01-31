@@ -11,8 +11,8 @@ mel=pd.read_csv('Df_mell.csv')
 
 macron['month'] = macron['date'].apply(lambda d: d.month)
 
-zemour['month'] = macron['date'].apply(lambda d: d.month)
-mel['month'] = macron['date'].apply(lambda d: d.month)
+zemour['month'] = zemour['date'].apply(lambda d: d.month)
+mel['month'] = mel['date'].apply(lambda d: d.month)
 
 mDf=pd.read_csv('occurM.csv')
 diccc=mDf.set_index('Unnamed: 0').T.to_dict('list')
