@@ -216,7 +216,9 @@ mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 if(mot in list(Mot)):
     st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][2], 'par Macron')
     
-
+if(mot not in list(Mot)):
+     st.write('Aucun candidatle n a utiliser le mot ',mot)
+    
 
 #st.write(mot)
 # ID={pol1:{
