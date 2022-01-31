@@ -75,13 +75,13 @@ if tout=='Oui':
     dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
     
     dataz = zemour[dd1o<zemour['daate']]
-    dataz=dataz[self.data['daate']<dd2o]
+    dataz=dataz[dataz['daate']<dd2o]
     
     datam = macron[dd1o<zemour['daate']]
-    datam=datam[self.data['daate']<dd2o]
+    datam=datam[datam['daate']<dd2o]
     
     datamel = mel[dd1o<zemour['daate']]
-    datamel=datamel[self.data['daate']<dd2o]
+    datamel=datamel[datamel['daate']<dd2o]
     
     base1o = alt.Chart(dataz)
     base2o=alt.Chart(datam)
