@@ -78,23 +78,23 @@ base2=alt.Chart(Abstractpol2.data)
 
 if var=='re-tweets':
     line11 = base1.mark_line().encode(
-        x='date',
-        y=E[0],)
+        
+        y=E[0])
     line12 = base2.mark_line(color='red').encode(
-        x='date',
-        y=E[0],)
+        
+        y=E[0])
 
 if var=='commentaires':
     line11 = base1.mark_line().encode(
-        x='date',
+       
         y=E[1],)
     line12 = base2.mark_line(color='red').encode(
-        x='date',
-        y=E[1],)
+        
+        y=E[1])
 
 if var=='likes':
     line11 = base1.mark_line().encode(
-        x='date',
+        x=
         y=E[2],)
     line12 = base2.mark_line(color='red').encode(
         x='date',
@@ -102,12 +102,12 @@ if var=='likes':
     
 
 
-st.altair_chart(line11+line12, use_container_width=True)
+st.altair_chart(line11+line12, use_container_width=False)
 
 
-option = st.sidebar.checkbox('quel mot?')
+#option = st.sidebar.checkbox('quel mot?')
 
-st.write('Your birthday is:', diccc[option])
+st.write('Your birthday is:')
 
 # ID={pol1:{
 # df
