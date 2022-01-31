@@ -136,7 +136,7 @@ pol1 = st.radio(
 
 pol2 = st.radio(
      "quel est le deuxieme  politicien que vouz choisisez? (rouge) ",
-     ('Zmmour', 'Macron', 'Mellonchon'))
+     ('Zemmour', 'Macron', 'Mellonchon'))
 
 # var = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
