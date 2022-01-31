@@ -5,9 +5,9 @@ import altair as alt
 import streamlit as st
 
 
-macron=pd.read_csv('Df_mac.csv')
-zemour=pd.read_csv('Df_zem.csv')
-mel=pd.read_csv('Df_mel.csv.csv')
+macron=pd.read_csv('DF_mac.csv')
+zemour=pd.read_csv('DF_zem.csv')
+mel=pd.read_csv('DF_mel.csv.csv')
 
 
 mDf=pd.read_csv('occurM.csv')
