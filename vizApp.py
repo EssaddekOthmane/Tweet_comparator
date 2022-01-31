@@ -213,7 +213,12 @@ st.altair_chart(line11+line12, use_container_width=True)
 st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 
-st.write(mot)
+if(mot in list(Mot)):
+    st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][0], 'par Macron')
+    
+
+
+#st.write(mot)
 # ID={pol1:{
 # df
 # },
