@@ -211,7 +211,8 @@ st.altair_chart(line11+line12, use_container_width=True)
 
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
-mot=st.text_input()
+mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
+
 st.write(mot)
 # ID={pol1:{
 # df
