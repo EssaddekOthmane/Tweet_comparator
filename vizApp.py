@@ -77,10 +77,10 @@ if tout=='Oui':
     dataz = zemour[dd1o<zemour['daate']]
     dataz=dataz[dataz['daate']<dd2o]
     
-    datam = macron[dd1o<zemour['daate']]
+    datam = macron[dd1o<macron['daate']]
     datam=datam[datam['daate']<dd2o]
     
-    datamel = mel[dd1o<zemour['daate']]
+    datamel = mel[dd1o<mel['daate']]
     datamel=datamel[datamel['daate']<dd2o]
     
     base1o = alt.Chart(dataz)
