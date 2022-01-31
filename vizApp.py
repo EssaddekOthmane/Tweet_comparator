@@ -78,35 +78,35 @@ if tout=='Oui':
     base3o=alt.Chart(mel)
     
     if varo=='re-tweets':
-        line11o = base1o.mark_line().encode(
+        line11o = base1o.mark_line(color='#DC143C').encode(
             x='daate',
             y=E[0],)
-        line12o = base2o.mark_line(color='red').encode(
+        line12o = base2o.mark_line(color='#E3CF57').encode(
             x='daate',
             y=E[0],)
-        line13o = base3o.mark_line(color='red').encode(
+        line13o = base3o.mark_line(color='#CD1076').encode(
             x='daate',
             y=E[0],)
 
     if varo=='commentaires':
-        line11o = base1o.mark_line().encode(
+        line11o = base1o.mark_line(color='#DC143C').encode(
            x='daate',
             y=E[1],)
-        line12o = base2o.mark_line(color='red').encode(
+        line12o = base2o.mark_line(color='E3CF57').encode(
             x='daate',
             y=E[1],)
-        line13o = base3o.mark_line(color='red').encode(
+        line13o = base3o.mark_line(color='#CD1076').encode(
             x='daate',
             y=E[1],)
 
     if varo=='likes':
-        line11o = base1o.mark_line().encode(
+        line11o = base1o.mark_line(color='#DC143C').encode(
             x='daate',
             y=E[2],)
-        line12o = base2o.mark_line(color='red').encode(
+        line12o = base2o.mark_line(color='E3CF57').encode(
             x='daate',
             y=E[2],)
-        line13o = base3o.mark_line(color='red').encode(
+        line13o = base3o.mark_line(color='#CD1076').encode(
             x='daate',
             y=E[2],)
 
