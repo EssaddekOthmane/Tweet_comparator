@@ -256,7 +256,7 @@ baseh=alt.Chart(dfh)
 lineh = baseh.mark_line().encode(
         x='x',
         y='Tj',)
-
+st.altair_chart(lineh, use_container_width=True)
 st.markdown("En passe maintenat a l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat a utiliser depuis la création de son compte tweeter. ")
 st.markdown("Les mots doivent etre en **minuscule!** ")
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité ...")
