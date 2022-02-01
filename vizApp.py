@@ -271,7 +271,8 @@ dfj=pd.DataFrame(list(zip(somme,heures)),columns=['Tweets','Heure'])
 
 chart=alt.Chart(dfj).mark_bar().encode(
     x='Heure',
-    y='Tweets'
+    y='Tweets',
+     color = '#8A2BE2'
 )
 st.altair_chart(chart, use_container_width=False)
 
