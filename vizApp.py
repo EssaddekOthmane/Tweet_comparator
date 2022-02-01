@@ -258,14 +258,14 @@ lineh = baseh.mark_line().encode(
         y='Tj',)
 st.altair_chart(lineh, use_container_width=True)
 st.markdown("Maintenant pour la distribution moyenne des tweet sur une journée:")
-
+temp=polh.data
 for k in range(24):
-    polh.data[f'{k}'] = polh.data['daate'].apply(lambda x : is_hour(x,k))
+    temp[f'{k}'] = temp['daate'].apply(lambda x : is_hour(x,k))
     
-somme = [polh.data[f'{k}'].sum() for k in range(24)]
+somme = [temp[f'{k}'].sum() for k in range(24)]
 somme = somme/sum(somme)
 somme = somme*100
-heures= [f'{k}' for k in range(24)]
+heures= [k for k in range(24)]
 dfj=pd.DataFrame(list(zip(somme,heures)),columns=['Tweets','Heure'])
 
 chart=alt.Chart(dfj).mark_bar().encode(
