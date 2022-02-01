@@ -82,10 +82,10 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 st.title('Comparateur des tweets de candidats de la  présidentielle 2022')
 st.markdown( "On s'est intéreseé durant ce projet à certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
 st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.")
-st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur un mois*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport au deux autres.   ")
+st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur un mois*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
 
 var = st.radio(
-     "quel est la  variable que vous souhaitez visualiser ",
+     "quelle est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
 
 st.write(
@@ -122,7 +122,7 @@ base2o=alt.Chart(datam)
 base3o=alt.Chart(datamel)
 
 if var=='re-tweets':
-    line11o = base1o.mark_line(color='#DC143C').encode(
+    line11o = base1o.mark_line(color='#8A2BE2').encode(
         x='daate',
         y=E[0],)
     line12o = base2o.mark_line(color='#E3CF57').encode(
@@ -241,7 +241,7 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
-st.markdown("Pour s'amuser un peu on peux voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie des tweets.")
+st.markdown("Pour s'amuser un peu, on peux voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie ses tweets.")
 polh = st.radio(
      "quel est le  politicien que vouz choisisez?",
      ('Zemmour', 'Macron', 'Mellonchon'))
