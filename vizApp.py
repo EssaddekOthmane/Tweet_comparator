@@ -32,7 +32,7 @@ def tweetPJ(df):
     l=[]
     t=0
     T=df['Timestamp'].to_list()
-    while i < len(T)-12:
+    while i < len(T)-15:
         t=0
         while t!=1:
             if(T[i][0:10]==T[i-1][0:10]):
