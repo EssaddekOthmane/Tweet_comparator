@@ -122,7 +122,7 @@ base2o=alt.Chart(datam)
 base3o=alt.Chart(datamel)
 
 if var=='re-tweets':
-    line11o = base1o.mark_line(color='#DC143C').encode(
+    line11o = base1o.mark_line(color='#8A2BE2').encode(
         x='daate',
         y=E[0],)
     line12o = base2o.mark_line(color='#E3CF57').encode(
@@ -133,7 +133,7 @@ if var=='re-tweets':
         y=E[0],)
 
 if var=='commentaires':
-    line11o = base1o.mark_line(color='#DC143C').encode(
+    line11o = base1o.mark_line(color='#8A2BE2').encode(
        x='daate',
         y=E[1],)
     line12o = base2o.mark_line(color='#E3CF57').encode(
@@ -144,7 +144,7 @@ if var=='commentaires':
         y=E[1],)
 
 if var=='likes':
-    line11o = base1o.mark_line(color='#DC143C').encode(
+    line11o = base1o.mark_line(color='#8A2BE2').encode(
         x='daate',
         y=E[2],)
     line12o = base2o.mark_line(color='#E3CF57').encode(
@@ -160,15 +160,15 @@ st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
 st.markdown("Maintenant vous pouvez faire des comparaisons pour une paire de politiciens.")
 pol1 = st.radio(
-     "quel est le premier  politicien que vouz choisisez? (bleu) ",
+     "Quel est le premier  politicien que vous choisissez? (bleu) ",
      ('Zemmour', 'Macron', 'Melenchon'))
 
 pol2 = st.radio(
-     "quel est le deuxieme  politicien que vouz choisisez? (rouge) ",
+     "Quel est le deuxieme  politicien que vous choisissez? (rouge) ",
      ('Zemmour', 'Macron', 'Mellonchon'))
 
 # var = st.radio(
-#      "quel est la  variable que vous souhaitez visualiser ",
+#      "Quelle est la  variable que vous souhaitez visualiser ",
 #      ('re-tweets', 'commentaires', 'likes'))
 
 
