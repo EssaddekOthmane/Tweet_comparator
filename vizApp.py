@@ -241,7 +241,7 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
-st.markdown("Pour s'amuser un peu on peut voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de quand chuacun publie des tweets.")
+st.markdown("Pour s'amuser un peu on peut voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie des tweets.")
 polh = st.radio(
      "quel est le  politicien que vouz choisisez?",
      ('Zemmour', 'Macron', 'Mellonchon'))
@@ -257,6 +257,23 @@ lineh = baseh.mark_line().encode(
         x='x',
         y='Tj',)
 st.altair_chart(lineh, use_container_width=True)
+st.markdown("Maintenant pour la distribution moyenne des tweet sur une journée:")
+
+for k in range(24):
+    polh.data[f'{k}'] = polh.data['daate'].apply(lambda x : is_hour(x,k))
+    
+somme = [polh.data[f'{k}'].sum() for k in range(24)]
+somme = somme/sum(somme)
+somme = somme*100
+heures= [f'{k}' for k in range(24)]
+dfj=pd.DataFrame(list(zip(somme,heures)),columns=['Tweets','Heure'])
+
+chart=alt.Chart(dfj).mark_bar().encode(
+    x='Heure',
+    y='Tweets'
+)
+st.altair_chart(chart, use_container_width=False)
+
 st.markdown("En passe maintenat a l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat a utiliser depuis la création de son compte tweeter. ")
 st.markdown("Les mots doivent etre en **minuscule!** ")
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité ...")
