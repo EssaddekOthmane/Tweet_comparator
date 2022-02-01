@@ -85,7 +85,7 @@ st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivi
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur un mois*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
 
 var = st.radio(
-     "quelle est la  variable que vous souhaitez visualiser ",
+     "Quelle est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
 
 st.write(
@@ -241,9 +241,9 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
-st.markdown("Pour s'amuser un peu, on peux voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie ses tweets.")
+st.markdown("Pour s'amuser un peu, on peut voir l'évolution du nombre de tweets par jour de chaque politiciens, et aussi la distribution sur une journée de  l'heure à laquelle chuaqun publie ses tweets.")
 polh = st.radio(
-     "quel est le  politicien que vouz choisisez?",
+     "Quel est le  politicien que vouz choisisez?",
      ('Zemmour', 'Macron', 'Mellonchon'))
 Abstractpolh=Candidat(polh)
 
@@ -276,15 +276,15 @@ chart=alt.Chart(dfj).mark_bar().encode(
 )
 st.altair_chart(chart, use_container_width=False)
 
-st.markdown("En passe maintenat a l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat a utiliser depuis la création de son compte tweeter. ")
-st.markdown("Les mots doivent etre en **minuscule!** ")
+st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte tweeter. ")
+st.markdown("Les mots doivent être en **minuscule!** ")
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité ...")
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 
 if(mot in list(Mot)):
-    st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][2], 'par Macron')
+    st.write('le mot ',mot,'a était cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][2], 'par Macron')
     
 if(mot not in list(Mot)):
      st.write("Aucun candidat n'a utiliser le mot ",mot)
