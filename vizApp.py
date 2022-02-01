@@ -51,7 +51,7 @@ def tweetPJ(df):
 
 
 macron=pd.read_csv('Dt_macron.csv')
-zemour=pd.read_csv('Data_zemour.csv')
+zemour=pd.read_csv('Dt_zemour.csv')
 mel=pd.read_csv('Df_mell.csv')
 
 macron['daate'] = macron['Timestamp'].apply( lambda x : lasq_date(x) )
