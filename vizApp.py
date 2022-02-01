@@ -35,7 +35,7 @@ def tweetPJ(df):
     while i < len(T)-15:
         t=0
         while t!=1:
-            if(T[i][0:10]==T[i-1][0:10]):
+            if(i<len(T) and T[i][0:10]==T[i-1][0:10]):
                 j=j+1
                 i=i+1
                 t=0
