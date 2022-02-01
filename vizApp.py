@@ -26,7 +26,7 @@ def is_hour(x,k):
         return 0
     
 def tweetPJ(df):
-    # p=df['Timestamp'][0][0:10]
+    # p=df['daate'][0][0:10]
     j=0
     i=1
     l=[]
