@@ -122,7 +122,7 @@ base2o=alt.Chart(datam)
 base3o=alt.Chart(datamel)
 
 if var=='re-tweets':
-    line11o = base1o.mark_line(color='#8A2BE2').encode(
+    line11o = base1o.mark_line(color='#DC143C').encode(
         x='daate',
         y=E[0],)
     line12o = base2o.mark_line(color='#E3CF57').encode(
