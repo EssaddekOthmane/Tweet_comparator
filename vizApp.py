@@ -19,10 +19,39 @@ def lasq_heure(x):
 
     return(datetime.strptime(d, '%H:%M:%S'))
         
+def is_hour(x,k):
+    if k== x.hour:
+        return 1
+    else:
+        return 0
+    
+def tweetPJ(df):
+    p=df['Timestamp'][0][0:10]
+    j=0
+    i=1
+    l=[]
+    t=0
+    T=df['Timestamp'].to_list()
+    while i < len(T)-4:
+        t=0
+        while t!=1:
+            if(T[i][0:10]==T[i-1][0:10]):
+                j=j+1
+                i=i+1
+                t=0
+                
+            
+            else:
+                l.append(j)
+                i=i+1
+                j=0
+                t=1
+    return(l)
 
 
-macron=pd.read_csv('DF_mac.csv')
-zemour=pd.read_csv('DF_zem.csv')
+
+macron=pd.read_csv('Data_macron.csv')
+zemour=pd.read_csv('Data_zemour.csv')
 mel=pd.read_csv('Df_mell.csv')
 
 macron['daate'] = macron['Timestamp'].apply( lambda x : lasq_date(x) )
@@ -222,7 +251,7 @@ if(mot in list(Mot)):
     st.write('le mot ',mot,'a etait cité ',diccc[mot][0], 'par Zemmour, ',diccc[mot][1], 'par Mellonchon et ',diccc[mot][2], 'par Macron')
     
 if(mot not in list(Mot)):
-     st.write('Aucun candidatle n a utiliser le mot ',mot)
+     st.write("Aucun candidat n'a utiliser le mot ",mot)
     
 
 #st.write(mot)
