@@ -80,8 +80,8 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 
 st.title('Comparateur des tweets de candidats de la  présidentielle 2022')
-st.markdown( "On s'est intereser durant ce projet a certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
-st.markdown( "On a fait en premier lieux une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.")
+st.markdown( "On s'est intéreseé durant ce projet à certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
+st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté tweeter avec chacun des candidats.")
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur un mois*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport au deux autres.   ")
 
 var = st.radio(
@@ -241,7 +241,7 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
-st.markdown("Pour s'amuser un peu on peut voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie des tweets.")
+st.markdown("Pour s'amuser un peu on peux voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de à quelle heure chuacun publie des tweets.")
 polh = st.radio(
      "quel est le  politicien que vouz choisisez?",
      ('Zemmour', 'Macron', 'Mellonchon'))
