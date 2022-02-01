@@ -26,13 +26,13 @@ def is_hour(x,k):
         return 0
     
 def tweetPJ(df):
-    p=df['Timestamp'][0][0:10]
+    # p=df['Timestamp'][0][0:10]
     j=0
     i=1
     l=[]
     t=0
     T=df['Timestamp'].to_list()
-    while i < len(T)-4:
+    while i < len(T)-12:
         t=0
         while t!=1:
             if(T[i][0:10]==T[i-1][0:10]):
@@ -46,8 +46,8 @@ def tweetPJ(df):
                 i=i+1
                 j=0
                 t=1
+    l.append(12)
     return(l)
-
 
 
 macron=pd.read_csv('Dt_macron.csv')
@@ -192,16 +192,18 @@ class Candidat(str):
     def __init__(self,str):
 
         if str is 'Zemmour':
-
-            self.data = zemour[dd1<zemour['daate']]
+            self.data=zemour
+            self.datatr = zemour[dd1<zemour['daate']]
             self.data=self.data[self.data['daate']<dd2]
 
         if str is 'Macron':
-            self.data=macron[dd1<macron['daate']]
+            self.data=macron
+            self.datatr=macron[dd1<macron['daate']]
             self.data=self.data[self.data['daate']<dd2]
         
         if str is 'Mellonchon':
-            self.data=mel[dd1<mel['daate']]
+            self.data=mel
+            self.datatr=mel[dd1<mel['daate']]
             self.data=self.data[self.data['daate']<dd2]
     
 
@@ -209,8 +211,8 @@ class Candidat(str):
 Abstractpol1=Candidat(pol1) 
 Abstractpol2=Candidat(pol2) 
 
-base1 = alt.Chart(Abstractpol1.data)
-base2=alt.Chart(Abstractpol2.data)
+base1 = alt.Chart(Abstractpol1.datatr)
+base2=alt.Chart(Abstractpol2.datatr)
 
 if var=='re-tweets':
     line11 = base1.mark_line().encode(
@@ -239,6 +241,21 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
+st.markdown("Pour s'amuser un peu on peut voir l'evolution du nombre de tweets par jour de chaque polititien, et aussi la distribution sur une journée de quand chuacun publie des tweets.")
+polh = st.radio(
+     "quel est le  politicien que vouz choisisez?",
+     ('Zemmour', 'Macron', 'Mellonchon'))
+Abstractpolh=Candidat(polh)
+
+Tj=tweetPJ(Abstractpolh.data)   
+x=[k for k in range(len(Tj))]
+dfh = pd.DataFrame(list(zip(x, Tj)),columns =['x', 'Tj'])
+
+baseh=alt.Chart(dfh)
+
+lineh = baseh.mark_line().encode(
+        x='x',
+        y='Tj',)
 
 st.markdown("En passe maintenat a l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat a utiliser depuis la création de son compte tweeter. ")
 st.markdown("Les mots doivent etre en **minuscule!** ")
