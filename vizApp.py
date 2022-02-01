@@ -253,7 +253,7 @@ dfh = pd.DataFrame(list(zip(x, Tj)),columns =['x', 'Tj'])
 
 baseh=alt.Chart(dfh)
 
-lineh = baseh.mark_line().encode(
+lineh = baseh.mark_line(color = '#8A2BE2').encode(
         x='x',
         y='Tj',)
 st.altair_chart(lineh, use_container_width=True)
@@ -272,7 +272,7 @@ dfj=pd.DataFrame(list(zip(somme,heures)),columns=['Tweets','Heure'])
 chart=alt.Chart(dfj).mark_bar().encode(
     x='Heure',
     y='Tweets',
-     color = '#8A2BE2'
+ 
 )
 st.altair_chart(chart, use_container_width=False)
 
