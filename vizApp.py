@@ -258,7 +258,8 @@ lineh = baseh.mark_line().encode(
         y='Tj',)
 st.altair_chart(lineh, use_container_width=True)
 st.markdown("Maintenant pour la distribution moyenne des tweet sur une journée:")
-temp=polh.data
+
+temp=Abstractpolh.data
 for k in range(24):
     temp[f'{k}'] = temp['daate'].apply(lambda x : is_hour(x,k))
     
