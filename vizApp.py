@@ -285,7 +285,7 @@ st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 
 if(mot in list(Mot)):
-    st.write('le mot ',mot,'a était cité par Zemmour ',diccc[mot][0], 'fois, ', 'par Mellonchon ',diccc[mot][1],'fois et par Macron'diccc[mot][2], 'fois')
+    st.write('le mot ',mot, 'a était cité par Zemmour ',diccc[mot][0], 'fois,  par Mellonchon ',diccc[mot][1],'fois et par Macron',diccc[mot][2], 'fois')
     
 if(mot not in list(Mot)):
      st.write("Aucun candidat n'a utiliser le mot ",mot)
