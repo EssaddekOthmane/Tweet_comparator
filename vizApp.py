@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime
 import altair as alt
 import streamlit as st
+# from spellchecker import SpellChecker
 
 def lasq_date(x):
     
@@ -278,7 +279,7 @@ st.altair_chart(chart, use_container_width=False)
 
 st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte tweeter. ")
 st.markdown("Les mots doivent être en **minuscule!** ")
-st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité ...")
+st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité, agriculture, migrants, pauvres, capitalisme, impôt, nucléaire, écologie, arabe, jeune, solidarité, justice, europe...")
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
 mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
