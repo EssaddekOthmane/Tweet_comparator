@@ -277,7 +277,7 @@ chart=alt.Chart(dfj).mark_bar().encode(
 )
 st.altair_chart(chart, use_container_width=False)
 
-st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte tweeter. ")
+st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter. ")
 st.markdown("Les mots doivent être en **minuscule!** ")
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
 # option = st.sidebar.checkbox('quel mot?')
