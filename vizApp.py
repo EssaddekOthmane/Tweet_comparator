@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime
 import altair as alt
 import streamlit as st
+import re
 # from spellchecker import SpellChecker
 
 def lasq_date(x):
@@ -282,8 +283,8 @@ st.markdown("Les mots doivent être en **minuscule!** ")
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
-mot=st.text_input('Quel est le mot que vous souhaitez tester?',"")
-
+mot_space=st.text_input('Quel est le mot que vous souhaitez tester?',"")
+mot=re.sub(r"\s+", "", mot_space)
 if(mot in list(Mot)):
     st.write('le mot ',mot, 'a était cité par Zemmour ',diccc[mot][0], 'fois,  par Mellonchon ',diccc[mot][1],'fois et par Macron',diccc[mot][2], 'fois')
     
