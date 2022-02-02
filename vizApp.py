@@ -167,7 +167,7 @@ pol1 = st.radio(
 
 pol2 = st.radio(
      "Quel est le deuxieme  politicien que vous choisissez? (rouge) ",
-     ('Zemmour', 'Macron', 'Mellonchon'))
+     ('Zemmour', 'Macron', 'Melenchon'))
 
 # var = st.radio(
 #      "Quelle est la  variable que vous souhaitez visualiser ",
@@ -187,7 +187,7 @@ d2 = st.date_input(
 
 dd2=d2.strftime('%Y-%m-%d %H:%M:%S')
   
-pols= ['Zemmour', 'Macron', 'Mellonchon']
+pols= ['Zemmour', 'Macron', 'Melenchon']
 
 class Candidat(str):
 
@@ -203,7 +203,7 @@ class Candidat(str):
             self.datatr=macron[dd1<macron['daate']]
             self.data=self.data[self.data['daate']<dd2]
         
-        if str is 'Mellonchon':
+        if str is 'Melenchon':
             self.data=mel
             self.datatr=mel[dd1<mel['daate']]
             self.data=self.data[self.data['daate']<dd2]
@@ -246,7 +246,7 @@ st.altair_chart(line11+line12, use_container_width=True)
 st.markdown("Pour s'amuser un peu, on peut voir l'évolution du nombre de tweets par jour de chaque politiciens, et aussi la distribution sur une journée de  l'heure à laquelle chuaqun publie ses tweets.")
 polh = st.radio(
      "Quel est le  politicien que vouz choisisez?",
-     ('Zemmour', 'Macron', 'Mellonchon'))
+     ('Zemmour', 'Macron', 'Melenchon'))
 Abstractpolh=Candidat(polh)
 
 Tj=tweetPJ(Abstractpolh.data)   
@@ -286,7 +286,7 @@ st.write('Quel est le mot que vous souhaitez tester?')
 mot_space=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 mot=re.sub(r"\s+", "", mot_space)
 if(mot in list(Mot)):
-    st.write('le mot ',mot, 'a était cité par Zemmour ',diccc[mot][0], 'fois,  par Mellonchon ',diccc[mot][1],'fois et par Macron',diccc[mot][2], 'fois')
+    st.write('le mot ',mot, 'a était cité par Zemmour ',diccc[mot][0], 'fois,  par Melenchon ',diccc[mot][1],'fois et par Macron',diccc[mot][2], 'fois')
     
 if(mot not in list(Mot)):
      st.write("Aucun candidat n'a utiliser le mot ",mot)
