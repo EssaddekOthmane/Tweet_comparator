@@ -285,6 +285,7 @@ st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité 
 st.write('Quel est le mot que vous souhaitez tester?')
 mot_space=st.text_input('Quel est le mot que vous souhaitez tester?',"")
 mot=re.sub(r"\s+", "", mot_space)
+mot = mot.lower()
 if(mot in list(Mot)):
     st.write('le mot ',mot, 'a était cité par Zemmour ',diccc[mot][0], 'fois,  par Melenchon ',diccc[mot][1],'fois et par Macron',diccc[mot][2], 'fois')
     
