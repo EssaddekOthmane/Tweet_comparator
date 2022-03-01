@@ -82,11 +82,11 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 
 st.title('Comparateur des tweets de candidats de la  présidentielle 2022')
-st.subheader("Author:")
+st.subheader("Author")
 st.markdown("ESSADDEK Othmane     \n        \n")
 st.markdown( "On s'est intéreseé durant ce projet à certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
 
-st.subheader("Analyse des données quantitative: Likes, re-tweets, commentaires et les heures des tweets ")
+st.subheader("Analyse des données quantitatives : Likes, re-tweets, commentaires et heures des tweets ")
 
 st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté Twitter avec chacun des candidats.")
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur 15 tweets*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
