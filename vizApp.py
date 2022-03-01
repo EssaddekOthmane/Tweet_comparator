@@ -82,7 +82,12 @@ E=['SMA_R3','SMA_C3','SMA_L3']
 
 
 st.title('Comparateur des tweets de candidats de la  présidentielle 2022')
+st.subheader("Author:")
+st.markdown("ESSADDEK Othmane     \n        \n")
 st.markdown( "On s'est intéreseé durant ce projet à certains candidats de la présidentielle 2022 **Emmanuelle Macron, Eric Zemmour** et **Jean Luc Melenchon**.")
+
+st.subheader("Analyse des données quantitative: Likes, re-tweets, commentaires et les heures des tweets ")
+
 st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté Twitter avec chacun des candidats.")
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur 15 tweets*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
 st.markdown("**Remarque:** Vous pouvez aussi visualiser les résultats de l'enquête du journal Le Monde par rapport à Twitter :)")
@@ -259,7 +264,7 @@ lineh = baseh.mark_line(color = '#8A2BE2').encode(
         x='x',
         y='Tj',)
 st.altair_chart(lineh, use_container_width=True)
-st.markdown("Maintenant pour la distribution moyenne des tweet sur une journée:")
+st.markdown("Maintenant pour la distribution moyenne (en %) des tweet sur une journée.    \n En d'autres termes: En moyenne sur tous les jours, si le candidat tweet 100 fois en 24h, alors le graphe en bas représente nombre de tweets par heure  ")
 
 temp=Abstractpolh.data
 for k in range(24):
@@ -277,6 +282,9 @@ chart=alt.Chart(dfj).mark_bar().encode(
  
 )
 st.altair_chart(chart, use_container_width=False)
+
+
+st.subheader("Analyse textuelle des tweets" )
 
 st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter. ")
 
