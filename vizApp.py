@@ -90,7 +90,7 @@ st.subheader("Analyse des données quantitatives : Likes, re-tweets, commentaire
 
 st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté Twitter pour chaque des candidat.")
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur 15 tweets*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
-st.markdown("**Remarque:** Vous pouvez aussi visualiser les résultats de l'enquête du journal Le Monde par rapport à Twitter :)")
+st.markdown("**Remarque:** Vous pouvez aussi visualiser les résultats de l'enquête du journal Le Monde par rapport à l'utilisation de faux comptes Twitter par zemmour:)")
 var = st.radio(
      "Quelle est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
@@ -168,11 +168,11 @@ st.altair_chart(line11o+line12o+line13o, use_container_width=True)
 
 st.markdown("Maintenant vous pouvez faire des comparaisons pour une paire de politiciens.")
 pol1 = st.radio(
-     "Quel est le premier  politicien que vous choisissez? (bleu) ",
+     "Quel est le premier  politicien que vous choisissez ? (bleu) ",
      ('Zemmour', 'Macron', 'Melenchon'))
 
 pol2 = st.radio(
-     "Quel est le deuxieme  politicien que vous choisissez? (rouge) ",
+     "Quel est le deuxieme ? (rouge) ",
      ('Zemmour', 'Macron', 'Melenchon'))
 
 # var = st.radio(
