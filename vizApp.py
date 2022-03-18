@@ -90,7 +90,7 @@ st.subheader("Analyse des données quantitatives : Likes, re-tweets, commentaire
 
 st.markdown( "On a fait en premier lieu une étude quantitative sur la réactivité de la communauté Twitter pour chaque des candidat.")
 st.markdown( "On vous propose alors de visualiser la moyenne mobile (*sur 15 tweets*) de la variable que vous voulez, et cela vous donnera une idée sur le moment de chaque candidat par rapport aux deux autres.   ")
-st.markdown("**Remarque:** Vous pouvez aussi visualiser les résultats de l'enquête du journal Le Monde par rapport à l'utilisation de faux comptes Twitter par zemmour:)")
+st.markdown("**Remarque:** Vous pouvez aussi visualiser les résultats de l'enquête du journal Le Monde par rapport à l'utilisation de faux comptes Twitter par zemmour. En effet vous pourrez le voir en comparant visuelemt la tendance des variables avant et après le début de la campagne présidentielle  :)")
 var = st.radio(
      "Quelle est la  variable que vous souhaitez visualiser ",
      ('re-tweets', 'commentaires', 'likes'))
