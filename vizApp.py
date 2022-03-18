@@ -123,7 +123,8 @@ datam=datam[datam['daate']<dd2o]
 
 datamel = mel[dd1o<mel['daate']]
 datamel=datamel[datamel['daate']<dd2o]
-
+ 
+    
 base1o = alt.Chart(dataz)
 base2o=alt.Chart(datam)
 base3o=alt.Chart(datamel)
