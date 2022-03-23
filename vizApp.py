@@ -200,18 +200,21 @@ class Candidat(str):
     def __init__(self,str):
 
         if str is 'Zemmour':
+            self.data=zemour.copy()
             self.datam=pd.read_csv('Data_zemour.csv')
             self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr = zemour[dd1<zemour['daate']]
             self.datatr=self.datatr[self.datatr['daate']<dd2]
 
         if str is 'Macron':
+            self.data=macron.copy()
             self.datam=pd.read_csv('Data_macron.csv')
             self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr=macron[dd1<macron['daate']]
             self.datatr=self.datatr[self.datatr['daate']<dd2]
         
         if str is 'Melenchon':
+            self.data=mel.copy()
             self.datam=mel.copy()
             self.datatr=mel[dd1<mel['daate']]
             self.datatr=self.datatr[self.datatr['daate']<dd2]
