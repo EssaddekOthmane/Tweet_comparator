@@ -107,13 +107,13 @@ st.write(datetime.date(macron.daate))
 
 
 
-d1o = st.date_input("La date du début",key =1)#,value= datetime.date(macron.daate[0])
+d1o = st.date_input("La date du début",value=datetime.date(2013, 11, 30),key =1)#,value= datetime.date(macron.daate[0])
 
 dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin",key =2)#value= datetime.date(macron.daate[-1])
+     "La date de fin",value=datetime.date(2022, 1, 1),key =2)#value= datetime.date(macron.daate[-1])
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
