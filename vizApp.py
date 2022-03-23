@@ -102,7 +102,7 @@ st.write(
 #d_cov=datetime.date("2020-01-30")
 
 date_time_str = '2020-02-28 08:15:27.243860'
-d_cov= datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+d_cov= datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
 
 
 #st.write(d_cov)
