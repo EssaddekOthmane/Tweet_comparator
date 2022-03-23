@@ -224,7 +224,7 @@ class Candidat(str):
         
         if str is 'Melenchon':
             self.data=mel.copy()
-            self.datam=pd.read_csv('Data_mell.csv')
+            self.datam=pd.read_csv('Data_mel.csv')
             self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr=mel[dd1<mel['daate']]
             self.datatr=self.datatr[self.datatr['daate']<dd2]
