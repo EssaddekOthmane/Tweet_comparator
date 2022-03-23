@@ -315,8 +315,17 @@ data_t=data_t[data_t['daate']<dd_2]
 
 st.write(data_t['Embedded_text'])
 
-for str in data_t['Embedded_text']:
-    st.write(str)
+processing = st.radio(
+                      "Voulez vous voir les tweets en détail ?",
+                      ("Non", "Oui"))
+
+if processing == "Oui":
+
+    for str in data_t['Embedded_text']:
+        st.write("***********************************************")
+        st.write(str)
+else:
+  pass
 
 # datam_ = macron[dd_1<macron['daate']]
 # datam_=datam_[datam_['daate']<dd_2]
