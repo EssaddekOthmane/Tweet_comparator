@@ -101,7 +101,7 @@ st.write(
 
 #d_cov=datetime.date("2020-01-30")
 
-date_time_str = '2020-02-28 08:15:27.243860'
+date_time_str = '2020-03-01 08:15:27.243860'
 d_cov= datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
 
 
@@ -315,7 +315,7 @@ dd_1=d_1.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d_2 = st.date_input(
-     "La date de fin",value=d_cov+ timedelta(days=5),key =6)
+     "La date de fin",value=d_cov+ timedelta(days=15),key =6)
 
 dd_2=d_2.strftime('%Y-%m-%d %H:%M:%S')
 
