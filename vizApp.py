@@ -99,10 +99,10 @@ var = st.radio(
 st.write(
      "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
-d_cov=datetime.date("2020-01-30")
+#d_cov=datetime.date("2020-01-30")
 
 #st.write(d_cov)
-#d_in=datetime.date(macron.daate[0])
+d_in=datetime.date(macron.daate[0])
 
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
