@@ -101,8 +101,8 @@ st.write(
 
 d_cov=datetime.date("2020-01-30")
 
-st.write(d_cov)
-d_in=datetime.date(macron.daate[0])
+#st.write(d_cov)
+#d_in=datetime.date(macron.daate[0])
 
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
