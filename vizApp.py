@@ -99,7 +99,9 @@ var = st.radio(
 st.write(
      "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
+d_cov=datetime.date("2020-01-30")
 
+st.write(d_cov)
 d_in=datetime.date(macron.daate[0])
 
 #     varo = st.radio(
@@ -176,7 +178,7 @@ pol1 = st.radio(
 
 pol2 = st.radio(
      "Quel est le deuxieme ? (rouge) ",
-     ('Zemmour', 'Macron', 'Melenchon'))
+     ('Macron','Zemmour', 'Melenchon'))
 
 # var = st.radio(
 #      "Quelle est la  variable que vous souhaitez visualiser ",
