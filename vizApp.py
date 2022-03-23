@@ -101,6 +101,10 @@ st.write(
 
 #d_cov=datetime.date("2020-01-30")
 
+date_time_str = '2020-02-28 08:15:27.243860'
+d_cov= datetime.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%S.%f')
+
+
 #st.write(d_cov)
 d_in=datetime.date(macron.daate[0])
 
@@ -116,7 +120,7 @@ dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin",value=d_in+ timedelta(days=7000),key =2)#value= datetime.date(macron.daate[-1])
+     "La date de fin",value=d_in+ timedelta(days=5000),key =2)#value= datetime.date(macron.daate[-1])
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -194,7 +198,7 @@ dd1=d1.strftime('%Y-%m-%d %H:%M:%S')
 
   
 d2 = st.date_input(
-     "La date de fin",value=d_in+ timedelta(days=7000),key =4)
+     "La date de fin",value=d_in+ timedelta(days=5000),key =4)
 
 dd2=d2.strftime('%Y-%m-%d %H:%M:%S')
   
@@ -305,13 +309,13 @@ polt = st.radio(
 
 Abstractpolt=Candidat(polt) 
 
-d_1 = st.date_input("La date du début",key =5)
+d_1 = st.date_input("La date du début",value=d_cov,key =5)
 
 dd_1=d_1.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d_2 = st.date_input(
-     "La date de fin",key =6)
+     "La date de fin",value=d_cov+ timedelta(days=5),key =6)
 
 dd_2=d_2.strftime('%Y-%m-%d %H:%M:%S')
 
