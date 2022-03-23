@@ -224,7 +224,8 @@ class Candidat(str):
         
         if str is 'Melenchon':
             self.data=mel.copy()
-            self.datam=mel.copy()
+            self.datam=pd.read_csv('Data_mell.csv')
+            self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr=mel[dd1<mel['daate']]
             self.datatr=self.datatr[self.datatr['daate']<dd2]
     
@@ -305,7 +306,7 @@ st.markdown("On passe maintenant à l'analyse des tweets, on commence par regard
 st.markdown("**Remarque :** Les tweets bruts de Melenchon sont à venir !")
 polt = st.radio(
      "Quel est le politicien que vous choisissez ?  ",
-     ('Macron','Zemmour'))
+     ('Macron','Zemmour','Melenchon'))
 
 Abstractpolt=Candidat(polt) 
 
