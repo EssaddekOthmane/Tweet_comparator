@@ -100,7 +100,7 @@ st.write(
      "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
 
-st.write(datetime.date(macron.daate[0])+ timedelta(days=1000))
+d_in=datetime.date(macron.daate[0])
 
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
@@ -108,13 +108,13 @@ st.write(datetime.date(macron.daate[0])+ timedelta(days=1000))
 
 
 
-d1o = st.date_input("La date du début",value=datetime.date(2013/11/30),key =1)#,value= datetime.date(macron.daate[0])
+d1o = st.date_input("La date du début",value=d_in,key =1)#,value= datetime.date(macron.daate[0])
 
 dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin",value=datetime.date(2022/1/1),key =2)#value= datetime.date(macron.daate[-1])
+     "La date de fin",value=d_in+ timedelta(days=1000),key =2)#value= datetime.date(macron.daate[-1])
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
