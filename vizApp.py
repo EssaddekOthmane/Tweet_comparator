@@ -300,13 +300,13 @@ polt = st.radio(
 
 Abstractpolt=Candidat(polt) 
 
-d_1 = st.date_input("La date du début",key =1)
+d_1 = st.date_input("La date du début",key =5)
 
 dd_1=d_1.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d_2 = st.date_input(
-     "La date de fin",key =2)
+     "La date de fin",key =6)
 
 dd_2=d_2.strftime('%Y-%m-%d %H:%M:%S')
 
