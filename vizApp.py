@@ -315,6 +315,9 @@ data_t=data_t[data_t['daate']<dd_2]
 
 st.write(data_t['Embedded_text'])
 
+for str in data_t['Embedded_text']:
+    st.write(str)
+
 # datam_ = macron[dd_1<macron['daate']]
 # datam_=datam_[datam_['daate']<dd_2]
 
