@@ -200,17 +200,19 @@ class Candidat(str):
     def __init__(self,str):
 
         if str is 'Zemmour':
-            self.data=zemour
+            self.datam=pd.read_csv('Data_zemour.csv')
+            self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr = zemour[dd1<zemour['daate']]
             self.data=self.data[self.data['daate']<dd2]
 
         if str is 'Macron':
-            self.data=macron
+            self.datam=pd.read_csv('Data_macron.csv')
+            self.datam['daate'] = self.datam['Timestamp'].apply( lambda x : lasq_date(x) )
             self.datatr=macron[dd1<macron['daate']]
             self.data=self.data[self.data['daate']<dd2]
         
         if str is 'Melenchon':
-            self.data=mel
+            self.data=mel.copy()
             self.datatr=mel[dd1<mel['daate']]
             self.data=self.data[self.data['daate']<dd2]
     
@@ -288,6 +290,34 @@ st.altair_chart(chart, use_container_width=False)
 st.subheader("Analyse textuelle des tweets" )
 
 st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter. ")
+
+polt = st.radio(
+     "Quel est le politicien que vous choisissez ?  ",
+     ('Zemmour', 'Macron', 'Melenchon'))
+
+Abstractpolt=Candidat(polt) 
+
+d_1 = st.date_input("La date du début",key =1)
+
+dd_1=d_1.strftime('%Y-%m-%d %H:%M:%S')
+
+
+d_2 = st.date_input(
+     "La date de fin",key =2)
+
+dd_2=d_2.strftime('%Y-%m-%d %H:%M:%S')
+
+data_t = Abstractpolt.datam[dd_1<Abstractpolt.datam['daate']]
+data_t=data_t[data_t['daate']<dd_2]
+
+st.write(data_t['Embedded_text'])
+
+# datam_ = macron[dd_1<macron['daate']]
+# datam_=datam_[datam_['daate']<dd_2]
+
+# datamel_ = mel[dd_1<mel['daate']]
+# datamel_=datamel_[datamel_['daate']<dd_2]
+ 
 
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
 # option = st.sidebar.checkbox('quel mot?')
