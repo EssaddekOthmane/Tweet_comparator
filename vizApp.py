@@ -292,11 +292,11 @@ st.altair_chart(chart, use_container_width=False)
 
 st.subheader("Analyse textuelle des tweets" )
 
-st.markdown("On passe maintenant à l'analyse des tweets, on vous propose alors de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter. ")
-
+st.markdown("On passe maintenant à l'analyse des tweets, on commence par regarder les tweets.")
+st.markdown("**Remarque :** Les tweets bruts de Melenchon sont à venir !")
 polt = st.radio(
      "Quel est le politicien que vous choisissez ?  ",
-     ('Zemmour', 'Macron', 'Melenchon'))
+     ('Macron','Zemmour'))
 
 Abstractpolt=Candidat(polt) 
 
@@ -321,6 +321,7 @@ st.write(data_t['Embedded_text'])
 # datamel_ = mel[dd_1<mel['daate']]
 # datamel_=datamel_[datamel_['daate']<dd_2]
  
+st.markdown("   \n On vous propose maintenant de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter.")
 
 st.markdown("**Proposition de mots :** islam , immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
 # option = st.sidebar.checkbox('quel mot?')
