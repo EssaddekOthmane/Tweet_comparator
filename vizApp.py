@@ -99,19 +99,21 @@ st.write(
      "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
 
+st.write(datetime.date(macron.daate[0]))
+
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
 #      ('re-tweets', 'commentaires', 'likes'))
 
 
 
-d1o = st.date_input("La date du début",value= datetime.date(macron.daate[0]),key =1)
+d1o = st.date_input("La date du début",key =1)#,value= datetime.date(macron.daate[0])
 
 dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin",value= datetime.date(macron.daate[-1]),key =2)
+     "La date de fin",key =2)#value= datetime.date(macron.daate[-1])
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
