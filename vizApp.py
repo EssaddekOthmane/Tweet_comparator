@@ -99,7 +99,7 @@ st.write(
      "On compare en premier tous les politiciens ! Macron est en jaune, Zemour en violet et Melenchon en vert. ")
 
 
-st.write(datetime.date(macron.daate[0]+"10Y"))
+st.write(datetime.date(macron.daate[0])+"10Y")
 
 #     varo = st.radio(
 #      "quel est la  variable que vous souhaitez visualiser ",
