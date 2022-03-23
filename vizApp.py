@@ -114,7 +114,7 @@ dd1o=d1o.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d2o = st.date_input(
-     "La date de fin",value=d_in+ timedelta(days=1000),key =2)#value= datetime.date(macron.daate[-1])
+     "La date de fin",value=d_in+ timedelta(days=7000),key =2)#value= datetime.date(macron.daate[-1])
 
 dd2o=d2o.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -185,14 +185,14 @@ pol2 = st.radio(
 
 
 d1 = st.date_input(
-     "La date du début",key =3)
+     "La date du début",value=d_in,key =3)
 
 
 dd1=d1.strftime('%Y-%m-%d %H:%M:%S')
 
   
 d2 = st.date_input(
-     "La date de fin",key =4)
+     "La date de fin",value=d_in+ timedelta(days=7000),key =4)
 
 dd2=d2.strftime('%Y-%m-%d %H:%M:%S')
   
