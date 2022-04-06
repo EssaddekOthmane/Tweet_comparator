@@ -316,7 +316,7 @@ dd_1=d_1.strftime('%Y-%m-%d %H:%M:%S')
 
 
 d_2 = st.date_input(
-     "La date de fin",value=d_cov+ timedelta(days=15),key =6)
+     "La date de fin",value=d_cov+ timedelta(days=5),key =6)
 
 dd_2=d_2.strftime('%Y-%m-%d %H:%M:%S')
 
@@ -325,17 +325,17 @@ data_t=data_t[data_t['daate']<dd_2]
 
 st.write(data_t['Embedded_text'])
 
-processing = st.radio(
-                      "Voulez vous voir les tweets en détail ?",
-                      ("Non", "Oui"))
+# processing = st.radio(
+#                       "Voulez vous voir les tweets en détail ?",
+#                       ("Non", "Oui"))
 
-if processing == "Oui":
+# if processing == "Oui":
 
-    for str in data_t['Embedded_text']:
-        st.write("***********************************************")
-        st.write(str)
-else:
-  pass
+#     for str in data_t['Embedded_text']:
+#         st.write("***********************************************")
+#         st.write(str)
+# else:
+#   pass
 
 # datam_ = macron[dd_1<macron['daate']]
 # datam_=datam_[datam_['daate']<dd_2]
