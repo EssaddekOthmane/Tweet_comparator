@@ -264,7 +264,7 @@ if var=='likes':
 
 
 st.altair_chart(line11+line12, use_container_width=True)
-st.markdown("Pour s'amuser un peu, on peut voir l'évolution du nombre de tweets par jour de chaque politiciens, et aussi la distribution sur une journée de  l'heure à laquelle chuaqun publie ses tweets.")
+st.markdown("On peut aussi voir l'évolution du nombre de tweets par jour de chaque politiciens, et aussi la distribution sur une journée de  l'heure à laquelle chuaqun publie ses tweets.")
 polh = st.radio(
      "Quel est le  politicien que vouz choisisez?",
      ('Zemmour', 'Macron', 'Melenchon'))
