@@ -345,7 +345,7 @@ st.write(data_t['Embedded_text'])
  
 st.markdown("   \n On vous propose maintenant de pluger un mot pour voir le nombre de fois que chaque candidat l'a utilisé depuis la création de son compte twitter.")
 
-st.markdown("**Proposition de mots :**immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
+st.markdown("**Proposition de mots :** immigration , gauche , égalité , agriculture , migrants , pauvres , capitalisme , impôt , nucléaire , écologie , arabe , jeune , solidarité , justice , europe ...")
 # option = st.sidebar.checkbox('quel mot?')
 st.write('Quel est le mot que vous souhaitez tester?')
 mot_space=st.text_input('Quel est le mot que vous souhaitez tester?',"")
